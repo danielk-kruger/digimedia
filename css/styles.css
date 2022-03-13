@@ -1,0 +1,204 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;500&family=Inter:wght@300;400;600&family=Oxygen&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  overflow-x: hidden;
+  font-family: "Oxygen", sans-serif;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  height: 60px;
+  width: 100%;
+  z-index: 1000;
+  overflow: hidden;
+}
+header nav {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+}
+header nav #mobileToggle {
+  position: fixed;
+  top: 15px;
+  right: 30px;
+  padding: 15px;
+  z-index: 1001;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+header nav #mobileToggle .bar {
+  height: 2px;
+  background: white;
+  display: inline-block;
+  margin-bottom: 8px;
+  border-radius: 20px;
+  transition: all 0.2s ease;
+}
+header nav #mobileToggle .bar:nth-child(1) {
+  width: 21px;
+}
+header nav #mobileToggle .bar:nth-child(2) {
+  width: 28px;
+}
+header nav #mobileToggle .bar:nth-child(3) {
+  width: 35px;
+}
+header nav #mobileToggle.active {
+  top: 35px;
+}
+header nav #mobileToggle.active .bar {
+  margin: 0;
+  width: 28px;
+  height: 2px;
+  background: black;
+}
+header nav #mobileToggle.active .bar:nth-child(2) {
+  opacity: 0;
+}
+header nav #mobileToggle.active .bar:nth-child(1) {
+  transform: rotate(45deg) translateY(2.5px);
+}
+header nav #mobileToggle.active .bar:nth-child(3) {
+  transform: rotate(-45deg) translateY(-2.5px);
+}
+header nav .navbar-panel {
+  position: fixed;
+  top: -1000px;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 50%;
+  width: 90%;
+  background: white;
+  z-index: 1000;
+  border-radius: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+header nav .navbar-panel.show {
+  top: 20px;
+}
+header nav .navbar-panel .logo h2 {
+  font-size: 28px;
+  text-transform: uppercase;
+  color: #b7094c;
+}
+header nav .navbar-panel .navbar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  list-style: none;
+}
+header nav .navbar-panel .navbar li {
+  width: 100%;
+  font-family: "Inter", sans-serif;
+}
+header nav .navbar-panel .navbar li a {
+  display: block;
+  width: 100%;
+  text-decoration: none;
+  color: black;
+  padding: 20px 0;
+  font-size: 21px;
+}
+
+.container {
+  position: relative;
+  text-align: center;
+  background: linear-gradient(60deg, #892b64 0%, #723c70 50%, #5c4d7d 100%);
+  color: white;
+}
+.container .fb-blob {
+  height: 100px;
+  width: 100px;
+}
+.container .inner-header {
+  height: 65vh;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.flex {
+  /*Flexbox for containers*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.waves {
+  position: relative;
+  width: 100%;
+  height: 15vh;
+  margin-bottom: -7px;
+  /*Fix for safari gap*/
+  min-height: 100px;
+  max-height: 150px;
+}
+
+/* Animation */
+.parallax > use {
+  animation: move-forever 25s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
+}
+
+.parallax > use:nth-child(1) {
+  animation-delay: -2s;
+  animation-duration: 7s;
+}
+
+.parallax > use:nth-child(2) {
+  animation-delay: -3s;
+  animation-duration: 10s;
+}
+
+.parallax > use:nth-child(3) {
+  animation-delay: -4s;
+  animation-duration: 13s;
+}
+
+.parallax > use:nth-child(4) {
+  animation-delay: -5s;
+  animation-duration: 20s;
+}
+
+@keyframes move-forever {
+  0% {
+    transform: translate3d(-90px, 0, 0);
+  }
+  100% {
+    transform: translate3d(85px, 0, 0);
+  }
+}
+/*Shrinking for mobile*/
+@media (max-width: 768px) {
+  .waves {
+    height: 40px;
+    min-height: 40px;
+  }
+
+  .content {
+    height: 30vh;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */

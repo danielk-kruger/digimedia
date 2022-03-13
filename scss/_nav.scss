@@ -1,0 +1,132 @@
+header {
+  position: fixed;
+  top: 0;
+  // left: 0;
+  // right: 0;
+  height: 60px;
+  width: 100%;
+  z-index: 1000;
+  overflow: hidden;
+  // z-index: =1;
+
+  nav {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+
+    #mobileToggle {
+      position: fixed;
+      top: 15px;
+      right: 30px;
+      padding: 15px;
+      z-index: 1001;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+
+      .bar {
+        height: 2px;
+        // width: 32px;
+        background: white;
+        display: inline-block;
+        margin-bottom: 8px;
+        // text-align: right;
+        border-radius: 20px;
+        transition: all 0.2s ease;
+
+        &:nth-child(1) {
+          width: 21px;
+        }
+
+        &:nth-child(2) {
+          width: 28px;
+        }
+
+        &:nth-child(3) {
+          width: 35px;
+        }
+      }
+
+      &.active {
+        top: 35px;
+
+        .bar {
+          margin: 0;
+          width: 28px;
+          height: 2px;
+          background: black;
+
+          &:nth-child(2) {
+            opacity: 0;
+          }
+
+          &:nth-child(1) {
+            transform: rotate(45deg) translateY(2.5px);
+          }
+
+          &:nth-child(3) {
+            transform: rotate(-45deg) translateY(-2.5px);
+          }
+        }
+      }
+    }
+
+    .navbar-panel {
+      position: fixed;
+      top: -1000px;
+      left: 50%;
+      transform: translateX(-50%);
+      height: 50%;
+      width: 90%;
+      background: white;
+      z-index: 1000;
+      border-radius: 20px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      transition: all 0.3s ease;
+
+      &.show {
+        top: 20px;
+      }
+
+      .logo {
+        h2 {
+          font-size: 28px;
+          text-transform: uppercase;
+          color: $magenta-vibrant;
+        }
+      }
+
+      .navbar {
+        display: flex;
+        flex-direction: column;
+        // justify-content: space-around;
+        align-items: center;
+        width: 100%;
+        list-style: none;
+        // height: max-content;
+
+        li {
+          width: 100%;
+          font-family: $inter;
+
+          a {
+            display: block;
+            width: 100%;
+            text-decoration: none;
+            color: black;
+            // background-color: blue;
+            padding: 20px 0;
+            font-size: 21px;
+          }
+        }
+      }
+    }
+  }
+}
