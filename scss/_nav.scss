@@ -76,10 +76,10 @@ header {
 
     .navbar-panel {
       position: fixed;
-      top: -1000px;
+      top: 20px;
       left: 50%;
-      transform: translateX(-50%);
-      height: 50%;
+      transform: translate(-50%, -1000px);
+      height: 70%;
       width: 90%;
       background: white;
       z-index: 1000;
@@ -92,7 +92,8 @@ header {
       transition: all 0.3s ease;
 
       &.show {
-        top: 20px;
+        // top: 20px;
+        transform: translate(-50%, 0px);
       }
 
       .logo {
@@ -122,8 +123,16 @@ header {
             text-decoration: none;
             color: black;
             // background-color: blue;
-            padding: 20px 0;
-            font-size: 21px;
+            padding: 25px 0;
+            // margin-top: 10px;
+            font-size: 20px;
+            position: relative;
+
+            &:focus,
+            &:hover,
+            &.active {
+              color: $magenta;
+            }
           }
         }
       }

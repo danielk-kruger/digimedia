@@ -74,10 +74,10 @@ header nav #mobileToggle.active .bar:nth-child(3) {
 }
 header nav .navbar-panel {
   position: fixed;
-  top: -1000px;
+  top: 20px;
   left: 50%;
-  transform: translateX(-50%);
-  height: 50%;
+  transform: translate(-50%, -1000px);
+  height: 70%;
   width: 90%;
   background: white;
   z-index: 1000;
@@ -90,7 +90,7 @@ header nav .navbar-panel {
   transition: all 0.3s ease;
 }
 header nav .navbar-panel.show {
-  top: 20px;
+  transform: translate(-50%, 0px);
 }
 header nav .navbar-panel .logo h2 {
   font-size: 28px;
@@ -113,8 +113,12 @@ header nav .navbar-panel .navbar li a {
   width: 100%;
   text-decoration: none;
   color: black;
-  padding: 20px 0;
-  font-size: 21px;
+  padding: 25px 0;
+  font-size: 20px;
+  position: relative;
+}
+header nav .navbar-panel .navbar li a:focus, header nav .navbar-panel .navbar li a:hover, header nav .navbar-panel .navbar li a.active {
+  color: #a01a58;
 }
 
 .container {
@@ -128,7 +132,7 @@ header nav .navbar-panel .navbar li a {
   width: 100px;
 }
 .container .inner-header {
-  height: 65vh;
+  height: 75vh;
   width: 100%;
   margin: 0;
   padding: 0;
@@ -145,7 +149,7 @@ header nav .navbar-panel .navbar li a {
 .waves {
   position: relative;
   width: 100%;
-  height: 15vh;
+  height: 25vh;
   margin-bottom: -7px;
   /*Fix for safari gap*/
   min-height: 100px;
