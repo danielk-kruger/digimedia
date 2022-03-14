@@ -35,7 +35,7 @@ header {
         margin-bottom: 8px;
         // text-align: right;
         border-radius: 20px;
-        transition: all 0.2s ease;
+        transition: all 0.45s ease;
 
         &:nth-child(1) {
           width: 21px;
@@ -89,7 +89,7 @@ header {
       flex-direction: column;
       justify-content: space-around;
       align-items: center;
-      transition: all 0.3s ease;
+      transition: all 0.45s ease;
 
       &.show {
         // top: 20px;
@@ -127,6 +127,7 @@ header {
             // margin-top: 10px;
             font-size: 20px;
             position: relative;
+            transition: all 0.25s ease;
 
             &:focus,
             &:hover,

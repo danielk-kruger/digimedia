@@ -43,7 +43,7 @@ header nav #mobileToggle .bar {
   display: inline-block;
   margin-bottom: 8px;
   border-radius: 20px;
-  transition: all 0.2s ease;
+  transition: all 0.45s ease;
 }
 header nav #mobileToggle .bar:nth-child(1) {
   width: 21px;
@@ -87,7 +87,7 @@ header nav .navbar-panel {
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  transition: all 0.3s ease;
+  transition: all 0.45s ease;
 }
 header nav .navbar-panel.show {
   transform: translate(-50%, 0px);
@@ -116,6 +116,7 @@ header nav .navbar-panel .navbar li a {
   padding: 25px 0;
   font-size: 20px;
   position: relative;
+  transition: all 0.25s ease;
 }
 header nav .navbar-panel .navbar li a:focus, header nav .navbar-panel .navbar li a:hover, header nav .navbar-panel .navbar li a.active {
   color: #a01a58;
@@ -149,7 +150,7 @@ header nav .navbar-panel .navbar li a:focus, header nav .navbar-panel .navbar li
 .waves {
   position: relative;
   width: 100%;
-  height: 25vh;
+  height: 15vh;
   margin-bottom: -7px;
   /*Fix for safari gap*/
   min-height: 100px;
