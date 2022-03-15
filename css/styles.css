@@ -177,32 +177,26 @@ header nav .navbar-panel .navbar li a:focus, header nav .navbar-panel .navbar li
   height: 85vh;
   width: 100%;
   margin: auto;
-  padding: 0;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding-top: 4rem;
+  padding-bottom: 6rem;
 }
 @media only screen and (min-width: 425px) {
   .container .inner-header {
     height: 85vh;
   }
 }
-.container .inner-header .web-dev-illustration {
+.container .inner-header img {
+  object-fit: contain;
   width: 300px;
   height: 400px;
-  margin-top: 6rem;
-  margin-bottom: -15px;
-  margin-left: 3rem;
-}
-@media only screen and (min-width: 425px) {
-  .container .inner-header .web-dev-illustration {
-    width: 400px;
-    height: 500px;
-  }
-}
-.container .inner-header .web-dev-illustration img {
-  object-fit: contain;
-  width: 100%;
-  height: 100%;
+  display: block;
+  margin-top: 7rem;
+  margin-left: 3.5rem;
 }
 .container .inner-header .intro {
   width: 100%;
@@ -210,21 +204,21 @@ header nav .navbar-panel .navbar li a:focus, header nav .navbar-panel .navbar li
   flex-direction: column;
   justify-content: center;
   font-family: "Fira Sans", sans-serif;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
   text-align: left;
 }
 .container .inner-header .intro-heading {
   margin-bottom: 10px;
   letter-spacing: 1.4px;
-  padding: 0px 30px;
+  padding: 0px 35px;
 }
 .container .inner-header .intro-heading h4 {
-  font-size: 24px;
+  font-size: 20px;
   margin-bottom: 5px;
   line-height: 32.4px;
 }
 .container .inner-header .intro-heading h2 {
-  font-size: 28px;
+  font-size: 24px;
 }
 .container .inner-header .intro-heading h2 span {
   color: #48bfe3;
@@ -233,7 +227,8 @@ header nav .navbar-panel .navbar li a:focus, header nav .navbar-panel .navbar li
   margin-bottom: 25px;
   letter-spacing: 1.8px;
   line-height: 28.2px;
-  padding: 0px 35px;
+  padding-left: 35px;
+  padding-right: 50px;
 }
 @media only screen and (min-width: 425px) {
   .container .inner-header .intro-content {
@@ -241,7 +236,7 @@ header nav .navbar-panel .navbar li a:focus, header nav .navbar-panel .navbar li
   }
 }
 .container .inner-header .intro-content .lead {
-  font-size: 20px;
+  font-size: 18px;
 }
 .container .inner-header .intro-buttons {
   width: auto;
@@ -259,6 +254,7 @@ header nav .navbar-panel .navbar li a:focus, header nav .navbar-panel .navbar li
   width: 200px;
   padding: 15px 0px;
   border-radius: 20px;
+  font-size: 15px;
 }
 .container .inner-header .intro-buttons a.btn {
   background: #56cfe1;
