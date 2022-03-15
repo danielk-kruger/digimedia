@@ -86,7 +86,7 @@ header nav .navbar-panel {
   text-align: center;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: space-around;
   align-items: center;
   padding: 10px 0px;
   transition: all 0.45s ease;
@@ -94,7 +94,7 @@ header nav .navbar-panel {
 header nav .navbar-panel .socials {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   width: 100%;
 }
@@ -102,14 +102,8 @@ header nav .navbar-panel .socials .separator {
   height: 2px;
   width: 8%;
   border-radius: 20px;
-  margin: 1rem auto 1.7rem;
+  margin: 0rem auto 2rem;
   background: #b7094c;
-}
-header nav .navbar-panel .socials h4 {
-  text-transform: capitalize;
-  font-size: 18px;
-  color: black;
-  font-weight: normal;
 }
 header nav .navbar-panel .socials-icons {
   width: 70%;
@@ -161,7 +155,7 @@ header nav .navbar-panel .navbar li a {
   text-decoration: none;
   color: black;
   padding: 25px 0;
-  font-size: 20px;
+  font-size: 18px;
   position: relative;
   transition: all 0.25s ease;
 }
