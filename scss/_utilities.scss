@@ -1,19 +1,29 @@
 @import url("https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;500&family=Inter:wght@300;400;600&family=Oxygen&display=swap");
 
 // colors
-$blue: #0091ad;
-$blue-darker: #455e89;
-$pastel-blue: #1780a1;
-$pastel-blue-darker: #2e6f95;
+// $blue: #0091ad;
+// $blue-darker: #455e89;
+// $pastel-blue: #1780a1;
+// $pastel-blue-darker: #2e6f95;
 
-$purple-grape: #5c4d7d;
-$purple-primary: #723c70;
+// $purple-grape: #5c4d7d;
+// $purple-primary: #723c70;
 
-$magenta: #a01a58;
-$magenta-vibrant: #b7094c;
-$magenta-purple: #892b64;
+// $magenta: #a01a58;
+// $magenta-vibrant: #b7094c;
+// $magenta-purple: #892b64;
 
-$sm-screen-size: 525px;
+$purple: #7400b9;
+$purple-deep: #6930c3;
+$purple-light: #5e60ce;
+
+$blue-primary: #5390d9;
+$blue-lighter: #4ea8de;
+
+$cyan: #48bfe3;
+$aquamarine: #56cfe1;
+
+$sm-screen-size: 425px;
 $md-screen-size: 768px;
 $lg-screen-size: 992px;
 $xl-screen-size: 1420px;
@@ -24,7 +34,7 @@ $inter: "Inter", sans-serif;
 $oxy: "Oxygen", sans-serif;
 
 @mixin sm-screen {
-  @media only screen and (max-width: $sm-screen-size) {
+  @media only screen and (min-width: $sm-screen-size) {
     @content;
   }
 }
