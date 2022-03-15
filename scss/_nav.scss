@@ -16,20 +16,30 @@ header {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    background-color: transparent;
+    position: relative;
+    transition: all 0.35s ease;
+    -webkit-transition: all 0.35s ease;
+
+    &.sticky {
+      background: rgba(#111, 0.6);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      // position: absolute;
+    }
 
     #mobileToggle {
       position: fixed;
       top: 30px;
       right: 40px;
       // padding: 15px;
-      z-index: 1001;
+      z-index: 2000;
       display: flex;
       flex-direction: column;
       align-items: flex-end;
       transition: top 0.3s 0.1s ease;
       -webkit-transition: top 0.3s 0.1s ease;
       will-change: top;
+      // opacity: 1;
       // transform: translateY(5%);
 
       .bar {
@@ -87,122 +97,123 @@ header {
       margin-left: 35px;
       color: white;
     }
+  }
 
-    .navbar-panel {
-      position: fixed;
-      top: 20px;
-      left: 50%;
-      transform: translate(-50%, -1000px);
-      -webkit-transform: translate(-50%, -1000px);
-      height: 75%;
-      width: 90%;
-      background: white;
-      z-index: 1000;
-      border-radius: 20px;
-      text-align: center;
+  .navbar-panel {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translate(-50%, -1000px);
+    -webkit-transform: translate(-50%, -1000px);
+    height: 75%;
+    width: 90%;
+    background: white;
+    z-index: 1000;
+    border-radius: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 5px 0px;
+    transition: all 0.45s ease;
+    -webkit-transition: all 0.45s ease;
+    // box-shadow: 0px 0px 15px rgba(#222, 0.2);
+
+    .socials {
       display: flex;
       flex-direction: column;
-      justify-content: space-around;
+      justify-content: center;
       align-items: center;
-      padding: 5px 0px;
-      transition: all 0.45s ease;
-      -webkit-transition: all 0.45s ease;
+      width: 100%;
 
-      .socials {
+      .separator {
+        // display: block;
+        height: 2px;
+        width: 8%;
+        border-radius: 20px;
+        margin: 0rem auto 2rem;
+        background: $purple;
+      }
+
+      &-icons {
+        width: 70%;
         display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
+        justify-content: space-around;
 
-        .separator {
-          // display: block;
-          height: 2px;
-          width: 8%;
-          border-radius: 20px;
-          margin: 0rem auto 2rem;
-          background: $purple;
-        }
+        a {
+          display: block;
+          text-decoration: none;
+          // color: $magenta-purple;
+          font-size: 24px;
 
-        &-icons {
-          width: 70%;
-          display: flex;
-          justify-content: space-around;
+          &.git {
+            color: black;
+          }
 
-          a {
-            display: block;
-            text-decoration: none;
-            // color: $magenta-purple;
-            font-size: 24px;
+          &.ig {
+            color: #e4405f;
+          }
 
-            &.git {
-              color: black;
-            }
+          &.codepen {
+            color: black;
+          }
 
-            &.ig {
-              color: #e4405f;
-            }
+          &.lnk {
+            color: #0077b5;
+          }
 
-            &.codepen {
-              color: black;
-            }
-
-            &.lnk {
-              color: #0077b5;
-            }
-
-            &.mail {
-              color: #c71610;
-            }
+          &.mail {
+            color: #c71610;
           }
         }
       }
+    }
 
-      &.show {
-        // top: 20px;
-        transform: translate(-50%, 0px);
-        -webkit-transform: translate(-50%, 0px);
+    &.show {
+      // top: 20px;
+      transform: translate(-50%, 0px);
+      -webkit-transform: translate(-50%, 0px);
+    }
+
+    .logo {
+      h2 {
+        font-size: 28px;
+        text-transform: uppercase;
+        color: $purple-light;
       }
+    }
 
-      .logo {
-        h2 {
-          font-size: 28px;
-          text-transform: uppercase;
-          color: $purple-light;
-        }
-      }
+    .navbar {
+      display: flex;
+      flex-direction: column;
+      // justify-content: space-around;
+      align-items: center;
+      width: 100%;
+      list-style: none;
+      // height: max-content;
 
-      .navbar {
-        display: flex;
-        flex-direction: column;
-        // justify-content: space-around;
-        align-items: center;
+      li {
         width: 100%;
-        list-style: none;
-        // height: max-content;
+        font-family: $inter;
 
-        li {
+        a {
+          display: block;
           width: 100%;
-          font-family: $inter;
+          text-decoration: none;
+          color: black;
+          // background-color: blue;
+          padding: 25px 0;
+          // margin-top: 10px;
+          font-size: 18px;
+          position: relative;
+          transition: all 0.25s ease;
+          -webkit-transition: all 0.25s ease;
 
-          a {
-            display: block;
-            width: 100%;
-            text-decoration: none;
-            color: black;
-            // background-color: blue;
-            padding: 25px 0;
-            // margin-top: 10px;
-            font-size: 18px;
-            position: relative;
-            transition: all 0.25s ease;
-            -webkit-transition: all 0.25s ease;
-
-            &:focus,
-            &:hover,
-            &.active {
-              color: $purple-light;
-            }
+          &:focus,
+          &:hover,
+          &.active {
+            color: $purple-light;
           }
         }
       }

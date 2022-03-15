@@ -23,7 +23,7 @@ $blue-lighter: #4ea8de;
 $cyan: #48bfe3;
 $aquamarine: #56cfe1;
 
-$sm-screen-size: 400px;
+$sm-screen-size: 415px;
 $md-screen-size: 768px;
 $lg-screen-size: 992px;
 $xl-screen-size: 1420px;
@@ -57,6 +57,14 @@ $oxy: "Oxygen", sans-serif;
   }
 }
 
+@function set-color($color) {
+  @if (lightness($color) > 40) {
+    @return #000;
+  } @else {
+    @return #fff;
+  }
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -66,5 +74,6 @@ $oxy: "Oxygen", sans-serif;
 body {
   width: 100%;
   overflow-x: hidden;
+  // overflow: .;
   font-family: $oxy;
 }

@@ -25,13 +25,20 @@ header nav {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  background-color: transparent;
+  position: relative;
+  transition: all 0.35s ease;
+  -webkit-transition: all 0.35s ease;
+}
+header nav.sticky {
+  background: rgba(17, 17, 17, 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
 }
 header nav #mobileToggle {
   position: fixed;
   top: 30px;
   right: 40px;
-  z-index: 1001;
+  z-index: 2000;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
@@ -81,7 +88,7 @@ header nav .logo {
   margin-left: 35px;
   color: white;
 }
-header nav .navbar-panel {
+header .navbar-panel {
   position: fixed;
   top: 20px;
   left: 50%;
@@ -101,66 +108,66 @@ header nav .navbar-panel {
   transition: all 0.45s ease;
   -webkit-transition: all 0.45s ease;
 }
-header nav .navbar-panel .socials {
+header .navbar-panel .socials {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 100%;
 }
-header nav .navbar-panel .socials .separator {
+header .navbar-panel .socials .separator {
   height: 2px;
   width: 8%;
   border-radius: 20px;
   margin: 0rem auto 2rem;
   background: #7400b9;
 }
-header nav .navbar-panel .socials-icons {
+header .navbar-panel .socials-icons {
   width: 70%;
   display: flex;
   justify-content: space-around;
 }
-header nav .navbar-panel .socials-icons a {
+header .navbar-panel .socials-icons a {
   display: block;
   text-decoration: none;
   font-size: 24px;
 }
-header nav .navbar-panel .socials-icons a.git {
+header .navbar-panel .socials-icons a.git {
   color: black;
 }
-header nav .navbar-panel .socials-icons a.ig {
+header .navbar-panel .socials-icons a.ig {
   color: #e4405f;
 }
-header nav .navbar-panel .socials-icons a.codepen {
+header .navbar-panel .socials-icons a.codepen {
   color: black;
 }
-header nav .navbar-panel .socials-icons a.lnk {
+header .navbar-panel .socials-icons a.lnk {
   color: #0077b5;
 }
-header nav .navbar-panel .socials-icons a.mail {
+header .navbar-panel .socials-icons a.mail {
   color: #c71610;
 }
-header nav .navbar-panel.show {
+header .navbar-panel.show {
   transform: translate(-50%, 0px);
   -webkit-transform: translate(-50%, 0px);
 }
-header nav .navbar-panel .logo h2 {
+header .navbar-panel .logo h2 {
   font-size: 28px;
   text-transform: uppercase;
   color: #5e60ce;
 }
-header nav .navbar-panel .navbar {
+header .navbar-panel .navbar {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
   list-style: none;
 }
-header nav .navbar-panel .navbar li {
+header .navbar-panel .navbar li {
   width: 100%;
   font-family: "Inter", sans-serif;
 }
-header nav .navbar-panel .navbar li a {
+header .navbar-panel .navbar li a {
   display: block;
   width: 100%;
   text-decoration: none;
@@ -171,7 +178,7 @@ header nav .navbar-panel .navbar li a {
   transition: all 0.25s ease;
   -webkit-transition: all 0.25s ease;
 }
-header nav .navbar-panel .navbar li a:focus, header nav .navbar-panel .navbar li a:hover, header nav .navbar-panel .navbar li a.active {
+header .navbar-panel .navbar li a:focus, header .navbar-panel .navbar li a:hover, header .navbar-panel .navbar li a.active {
   color: #5e60ce;
 }
 
@@ -195,7 +202,7 @@ header nav .navbar-panel .navbar li a:focus, header nav .navbar-panel .navbar li
   padding-bottom: 6rem;
   overflow: hidden;
 }
-@media only screen and (min-width: 400px) {
+@media only screen and (min-width: 415px) {
   .container .inner-header {
     height: 75vh;
   }
@@ -209,7 +216,7 @@ header nav .navbar-panel .navbar li a:focus, header nav .navbar-panel .navbar li
   margin-bottom: -2rem;
   margin-left: 2rem;
 }
-@media only screen and (min-width: 400px) {
+@media only screen and (min-width: 415px) {
   .container .inner-header img {
     margin-top: 9rem;
     margin-left: 2rem;
@@ -236,7 +243,7 @@ header nav .navbar-panel .navbar li a:focus, header nav .navbar-panel .navbar li
   margin-bottom: 5px;
   line-height: 32.4px;
 }
-@media only screen and (min-width: 400px) {
+@media only screen and (min-width: 415px) {
   .container .inner-header .intro-heading h4 {
     font-size: 24px;
   }
@@ -244,7 +251,7 @@ header nav .navbar-panel .navbar li a:focus, header nav .navbar-panel .navbar li
 .container .inner-header .intro-heading h2 {
   font-size: 24px;
 }
-@media only screen and (min-width: 400px) {
+@media only screen and (min-width: 415px) {
   .container .inner-header .intro-heading h2 {
     font-size: 28px;
   }
@@ -259,7 +266,7 @@ header nav .navbar-panel .navbar li a:focus, header nav .navbar-panel .navbar li
   padding-left: 35px;
   padding-right: 50px;
 }
-@media only screen and (min-width: 400px) {
+@media only screen and (min-width: 415px) {
   .container .inner-header .intro-content {
     padding-right: 7rem;
   }
@@ -267,7 +274,7 @@ header nav .navbar-panel .navbar li a:focus, header nav .navbar-panel .navbar li
 .container .inner-header .intro-content .lead {
   font-size: 18px;
 }
-@media only screen and (min-width: 400px) {
+@media only screen and (min-width: 415px) {
   .container .inner-header .intro-content .lead {
     font-size: 20px;
   }
@@ -282,7 +289,7 @@ header nav .navbar-panel .navbar li a:focus, header nav .navbar-panel .navbar li
   padding: 0px 15px;
   margin-top: 1.5rem;
 }
-@media only screen and (min-width: 400px) {
+@media only screen and (min-width: 415px) {
   .container .inner-header .intro-buttons {
     margin-top: 2rem;
   }
@@ -297,7 +304,7 @@ header nav .navbar-panel .navbar li a:focus, header nav .navbar-panel .navbar li
   font-size: 15px;
   box-shadow: 0px 2px 8px rgba(68, 68, 68, 0.25);
 }
-@media only screen and (min-width: 400px) {
+@media only screen and (min-width: 415px) {
   .container .inner-header .intro-buttons a {
     font-size: 18px;
   }
@@ -311,7 +318,7 @@ header nav .navbar-panel .navbar li a:focus, header nav .navbar-panel .navbar li
   color: white;
   margin-top: 15px;
 }
-@media only screen and (min-width: 400px) {
+@media only screen and (min-width: 415px) {
   .container .inner-header .intro-buttons a.services-btn {
     margin-top: 20px;
   }
