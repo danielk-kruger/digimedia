@@ -159,9 +159,7 @@ header nav .navbar-panel .navbar li a {
   position: relative;
   transition: all 0.25s ease;
 }
-header nav .navbar-panel .navbar li a:focus,
-header nav .navbar-panel .navbar li a:hover,
-header nav .navbar-panel .navbar li a.active {
+header nav .navbar-panel .navbar li a:focus, header nav .navbar-panel .navbar li a:hover, header nav .navbar-panel .navbar li a.active {
   color: #5e60ce;
 }
 
@@ -176,7 +174,7 @@ header nav .navbar-panel .navbar li a.active {
   width: 100px;
 }
 .container .inner-header {
-  height: 90vh;
+  height: 80vh;
   width: 100%;
   margin: auto;
   padding: 0;
