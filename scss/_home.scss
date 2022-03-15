@@ -3,16 +3,13 @@
   text-align: center;
   background: linear-gradient(60deg, $blue-lighter 0%, $purple-deep 100%);
   color: white;
-
-  .fb-blob {
-    height: 100px;
-    width: 100px;
-  }
+  // overflow-x: hidden;
+  width: 100%;
 
   .inner-header {
     height: 85vh;
-    width: 100%;
-    margin: auto;
+    width: auto;
+    margin: 0 auto;
     // padding: 0;
     // background-color: pink;
     display: flex;
@@ -22,9 +19,10 @@
     position: relative;
     padding-top: 4rem;
     padding-bottom: 6rem;
+    overflow-x: hidden;
 
     @include sm-screen {
-      height: 85vh;
+      height: 75vh;
     }
 
     img {
@@ -33,7 +31,15 @@
       height: 400px;
       display: block;
       margin-top: 7rem;
-      margin-left: 3.5rem;
+      margin-bottom: -2rem;
+      margin-left: 2rem;
+
+      @include sm-screen {
+        // margin-bottom: 0;
+        margin-left: 2rem;
+        width: 350px;
+        height: 450px;
+      }
     }
 
     .intro {
@@ -44,7 +50,7 @@
       justify-content: center;
       // align-items: flex-end;
       font-family: $fira-sans;
-      margin-bottom: 2rem;
+      margin-bottom: 3.5rem;
       text-align: left;
 
       &-heading {
@@ -56,10 +62,18 @@
           font-size: 20px;
           margin-bottom: 5px;
           line-height: 32.4px;
+
+          @include sm-screen {
+            font-size: 24px;
+          }
         }
 
         h2 {
           font-size: 24px;
+
+          @include sm-screen {
+            font-size: 28px;
+          }
 
           span {
             // font-size: 28px;
@@ -86,6 +100,10 @@
         .lead {
           font-size: 18px;
           // color: $blue;
+
+          @include sm-screen {
+            font-size: 20px;
+          }
         }
       }
 
@@ -107,6 +125,10 @@
           padding: 15px 0px;
           border-radius: 20px;
           font-size: 15px;
+
+          @include sm-screen {
+            font-size: 18px;
+          }
           // padding: 0px ;
           // width: 100%;
 
