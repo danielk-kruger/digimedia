@@ -14,13 +14,13 @@ header {
     width: 100%;
     height: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     background-color: transparent;
 
     #mobileToggle {
       position: fixed;
-      top: 5%;
+      top: 30px;
       right: 40px;
       // padding: 15px;
       z-index: 1001;
@@ -28,6 +28,7 @@ header {
       flex-direction: column;
       align-items: flex-end;
       transition: top 0.3s 0.1s ease;
+      -webkit-transition: top 0.3s 0.1s ease;
       will-change: top;
       // transform: translateY(5%);
 
@@ -40,6 +41,7 @@ header {
         // text-align: right;
         border-radius: 20px;
         transition: transform 0.4s ease-in-out, opacity 0.2s ease-in-out;
+        -webkit-transition: transform 0.4s ease-in-out, opacity 0.2s ease-in-out;
 
         &:nth-child(1) {
           width: 21px;
@@ -70,13 +72,20 @@ header {
 
           &:nth-child(1) {
             transform: rotate(45deg) translateY(2.5px);
+            -webkit-transform: rotate(45deg) translateY(2.5px);
           }
 
           &:nth-child(3) {
             transform: rotate(-45deg) translateY(-2.5px);
+            -webkit-transform: rotate(-45deg) translateY(-2.5px);
           }
         }
       }
+    }
+
+    .logo {
+      margin-left: 35px;
+      color: white;
     }
 
     .navbar-panel {
@@ -84,6 +93,7 @@ header {
       top: 20px;
       left: 50%;
       transform: translate(-50%, -1000px);
+      -webkit-transform: translate(-50%, -1000px);
       height: 75%;
       width: 90%;
       background: white;
@@ -96,6 +106,7 @@ header {
       align-items: center;
       padding: 5px 0px;
       transition: all 0.45s ease;
+      -webkit-transition: all 0.45s ease;
 
       .socials {
         display: flex;
@@ -150,6 +161,7 @@ header {
       &.show {
         // top: 20px;
         transform: translate(-50%, 0px);
+        -webkit-transform: translate(-50%, 0px);
       }
 
       .logo {
@@ -184,6 +196,7 @@ header {
             font-size: 18px;
             position: relative;
             transition: all 0.25s ease;
+            -webkit-transition: all 0.25s ease;
 
             &:focus,
             &:hover,
