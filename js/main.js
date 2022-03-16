@@ -38,7 +38,7 @@ function changeLinkState() {
 }
 
 function changeNavState() {
-  if (window.scrollY + 850 > home.offsetTop + home.offsetHeight) {
+  if (window.scrollY + 800 > home.offsetTop + home.offsetHeight) {
     navbar.classList.add("sticky");
   } else {
     navbar.classList.remove("sticky");

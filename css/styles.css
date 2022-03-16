@@ -26,19 +26,17 @@ header nav {
   justify-content: flex-start;
   align-items: center;
   position: relative;
-  transition: all 0.35s ease;
-  -webkit-transition: all 0.35s ease;
+  transition: background 0.35s ease-in-out;
+  -webkit-transition: background 0.35s ease-in-out;
 }
 header nav.sticky {
-  background: rgba(17, 17, 17, 0.6);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  background: linear-gradient(60deg, #4ea8de 0%, #6930c3 100%);
 }
 header nav #mobileToggle {
   position: fixed;
   top: 30px;
   right: 40px;
-  z-index: 2000;
+  z-index: 1000;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
@@ -97,7 +95,7 @@ header .navbar-panel {
   height: 75%;
   width: 90%;
   background: white;
-  z-index: 1000;
+  z-index: 999;
   border-radius: 20px;
   text-align: center;
   display: flex;
@@ -150,6 +148,9 @@ header .navbar-panel .socials-icons a.mail {
 header .navbar-panel.show {
   transform: translate(-50%, 0px);
   -webkit-transform: translate(-50%, 0px);
+}
+header .navbar-panel .logo {
+  padding-bottom: 3.5rem;
 }
 header .navbar-panel .logo h2 {
   font-size: 28px;

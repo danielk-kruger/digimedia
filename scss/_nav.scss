@@ -17,13 +17,14 @@ header {
     justify-content: flex-start;
     align-items: center;
     position: relative;
-    transition: all 0.35s ease;
-    -webkit-transition: all 0.35s ease;
+    transition: background 0.35s ease-in-out;
+    -webkit-transition: background 0.35s ease-in-out;
 
     &.sticky {
-      background: rgba(#111, 0.6);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
+      background: linear-gradient(60deg, $blue-lighter 0%, $purple-deep 100%);
+      // background: rgba(#111, 0.6);
+      // backdrop-filter: blur(12px);
+      // -webkit-backdrop-filter: blur(12px);
       // position: absolute;
     }
 
@@ -32,7 +33,7 @@ header {
       top: 30px;
       right: 40px;
       // padding: 15px;
-      z-index: 2000;
+      z-index: 1000;
       display: flex;
       flex-direction: column;
       align-items: flex-end;
@@ -108,7 +109,7 @@ header {
     height: 75%;
     width: 90%;
     background: white;
-    z-index: 1000;
+    z-index: 999;
     border-radius: 20px;
     text-align: center;
     display: flex;
@@ -177,6 +178,11 @@ header {
     }
 
     .logo {
+      padding-bottom: 3.5rem;
+      // padding-right: 2rem;
+      // align-self: flex-start;
+      // padding-left: 2rem;
+
       h2 {
         font-size: 28px;
         text-transform: uppercase;
