@@ -22,10 +22,6 @@ header {
 
     &.sticky {
       background: linear-gradient(60deg, $blue-lighter 0%, $purple-deep 100%);
-      // background: rgba(#111, 0.6);
-      // backdrop-filter: blur(12px);
-      // -webkit-backdrop-filter: blur(12px);
-      // position: absolute;
     }
 
     #mobileToggle {
@@ -40,8 +36,11 @@ header {
       transition: top 0.3s 0.1s ease;
       -webkit-transition: top 0.3s 0.1s ease;
       will-change: top;
-      // opacity: 1;
-      // transform: translateY(5%);
+
+      @include md-screen {
+        right: 110px;
+        // top: 40px;
+      }
 
       .bar {
         height: 2px;
@@ -54,16 +53,32 @@ header {
         transition: transform 0.4s ease-in-out, opacity 0.2s ease-in-out;
         -webkit-transition: transform 0.4s ease-in-out, opacity 0.2s ease-in-out;
 
+        @include md-screen {
+          height: 3px;
+        }
+
         &:nth-child(1) {
           width: 21px;
+
+          @include md-screen {
+            width: 28px;
+          }
         }
 
         &:nth-child(2) {
           width: 28px;
+
+          @include md-screen {
+            width: 35px;
+          }
         }
 
         &:nth-child(3) {
           width: 35px;
+
+          @include md-screen {
+            width: 42px;
+          }
         }
       }
 
@@ -71,11 +86,20 @@ header {
         top: calc(5% + 20px);
         // transform: translateY(5%);
 
+        @include md-screen {
+          top: calc(5% + 30px);
+        }
+
         .bar {
           margin: 0;
           width: 28px;
           height: 2px;
           background: black;
+
+          @include md-screen {
+            width: 35px;
+            height: 3px;
+          }
 
           &:nth-child(2) {
             opacity: 0;
@@ -84,11 +108,21 @@ header {
           &:nth-child(1) {
             transform: rotate(45deg) translateY(2.5px);
             -webkit-transform: rotate(45deg) translateY(2.5px);
+
+            @include md-screen {
+              transform: rotate(45deg) translateY(3.5px);
+              -webkit-transform: rotate(45deg) translateY(3.5px);
+            }
           }
 
           &:nth-child(3) {
             transform: rotate(-45deg) translateY(-2.5px);
             -webkit-transform: rotate(-45deg) translateY(-2.5px);
+
+            @include md-screen {
+              transform: rotate(-45deg) translateY(-3.5px);
+              -webkit-transform: rotate(-45deg) translateY(-3.5px);
+            }
           }
         }
       }
@@ -97,6 +131,10 @@ header {
     .logo {
       margin-left: 35px;
       color: white;
+
+      @include md-screen {
+        margin-left: 80px;
+      }
     }
   }
 
@@ -120,6 +158,11 @@ header {
     transition: all 0.45s ease;
     -webkit-transition: all 0.45s ease;
     // box-shadow: 0px 0px 15px rgba(#222, 0.2);
+
+    @include md-screen {
+      width: 80%;
+      height: 80%;
+    }
 
     .socials {
       display: flex;
@@ -148,6 +191,10 @@ header {
           text-decoration: none;
           // color: $magenta-purple;
           font-size: 28px;
+
+          @include md-screen {
+            font-size: 35px;
+          }
 
           &.git {
             color: black;
@@ -216,6 +263,10 @@ header {
           position: relative;
           transition: all 0.25s ease;
           -webkit-transition: all 0.25s ease;
+
+          @include md-screen {
+            font-size: 24px;
+          }
 
           &:focus,
           &:hover,

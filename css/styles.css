@@ -63,6 +63,11 @@ header nav #mobileToggle {
   -webkit-transition: top 0.3s 0.1s ease;
   will-change: top;
 }
+@media only screen and (min-width: 768px) {
+  header nav #mobileToggle {
+    right: 110px;
+  }
+}
 header nav #mobileToggle .bar {
   height: 2px;
   background: white;
@@ -72,23 +77,54 @@ header nav #mobileToggle .bar {
   transition: transform 0.4s ease-in-out, opacity 0.2s ease-in-out;
   -webkit-transition: transform 0.4s ease-in-out, opacity 0.2s ease-in-out;
 }
+@media only screen and (min-width: 768px) {
+  header nav #mobileToggle .bar {
+    height: 3px;
+  }
+}
 header nav #mobileToggle .bar:nth-child(1) {
   width: 21px;
+}
+@media only screen and (min-width: 768px) {
+  header nav #mobileToggle .bar:nth-child(1) {
+    width: 28px;
+  }
 }
 header nav #mobileToggle .bar:nth-child(2) {
   width: 28px;
 }
+@media only screen and (min-width: 768px) {
+  header nav #mobileToggle .bar:nth-child(2) {
+    width: 35px;
+  }
+}
 header nav #mobileToggle .bar:nth-child(3) {
   width: 35px;
 }
+@media only screen and (min-width: 768px) {
+  header nav #mobileToggle .bar:nth-child(3) {
+    width: 42px;
+  }
+}
 header nav #mobileToggle.active {
   top: calc(5% + 20px);
+}
+@media only screen and (min-width: 768px) {
+  header nav #mobileToggle.active {
+    top: calc(5% + 30px);
+  }
 }
 header nav #mobileToggle.active .bar {
   margin: 0;
   width: 28px;
   height: 2px;
   background: black;
+}
+@media only screen and (min-width: 768px) {
+  header nav #mobileToggle.active .bar {
+    width: 35px;
+    height: 3px;
+  }
 }
 header nav #mobileToggle.active .bar:nth-child(2) {
   opacity: 0;
@@ -97,13 +133,30 @@ header nav #mobileToggle.active .bar:nth-child(1) {
   transform: rotate(45deg) translateY(2.5px);
   -webkit-transform: rotate(45deg) translateY(2.5px);
 }
+@media only screen and (min-width: 768px) {
+  header nav #mobileToggle.active .bar:nth-child(1) {
+    transform: rotate(45deg) translateY(3.5px);
+    -webkit-transform: rotate(45deg) translateY(3.5px);
+  }
+}
 header nav #mobileToggle.active .bar:nth-child(3) {
   transform: rotate(-45deg) translateY(-2.5px);
   -webkit-transform: rotate(-45deg) translateY(-2.5px);
 }
+@media only screen and (min-width: 768px) {
+  header nav #mobileToggle.active .bar:nth-child(3) {
+    transform: rotate(-45deg) translateY(-3.5px);
+    -webkit-transform: rotate(-45deg) translateY(-3.5px);
+  }
+}
 header nav .logo {
   margin-left: 35px;
   color: white;
+}
+@media only screen and (min-width: 768px) {
+  header nav .logo {
+    margin-left: 80px;
+  }
 }
 header .navbar-panel {
   position: fixed;
@@ -124,6 +177,12 @@ header .navbar-panel {
   padding: 5px 0px;
   transition: all 0.45s ease;
   -webkit-transition: all 0.45s ease;
+}
+@media only screen and (min-width: 768px) {
+  header .navbar-panel {
+    width: 80%;
+    height: 80%;
+  }
 }
 header .navbar-panel .socials {
   display: flex;
@@ -148,6 +207,11 @@ header .navbar-panel .socials-icons a {
   display: block;
   text-decoration: none;
   font-size: 28px;
+}
+@media only screen and (min-width: 768px) {
+  header .navbar-panel .socials-icons a {
+    font-size: 35px;
+  }
 }
 header .navbar-panel .socials-icons a.git {
   color: black;
@@ -195,6 +259,11 @@ header .navbar-panel .navbar li a {
   transition: all 0.25s ease;
   -webkit-transition: all 0.25s ease;
 }
+@media only screen and (min-width: 768px) {
+  header .navbar-panel .navbar li a {
+    font-size: 24px;
+  }
+}
 header .navbar-panel .navbar li a:focus, header .navbar-panel .navbar li a:hover, header .navbar-panel .navbar li a.active {
   color: #5e60ce;
 }
@@ -226,19 +295,26 @@ header .navbar-panel .navbar li a:focus, header .navbar-panel .navbar li a:hover
 }
 .container .inner-header img {
   object-fit: contain;
-  width: 300px;
-  height: 400px;
+  width: 350px;
+  height: 450px;
   display: block;
   margin-top: 8rem;
   margin-bottom: -2rem;
-  margin-left: 2rem;
+  margin-left: 3.5rem;
 }
 @media only screen and (min-width: 415px) {
   .container .inner-header img {
     margin-top: 9rem;
     margin-left: 2rem;
-    width: 350px;
-    height: 450px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .container .inner-header img {
+    width: 500px;
+    height: 600px;
+    margin-top: 6rem;
+    margin-bottom: -3rem;
+    margin-left: 8rem;
   }
 }
 .container .inner-header .intro {
@@ -247,13 +323,18 @@ header .navbar-panel .navbar li a:focus, header .navbar-panel .navbar li a:hover
   flex-direction: column;
   justify-content: center;
   font-family: "Fira Sans", sans-serif;
-  margin-bottom: 3.5rem;
+  margin-bottom: 4rem;
   text-align: left;
 }
 .container .inner-header .intro-heading {
   margin-bottom: 10px;
   letter-spacing: 1.4px;
   padding: 0px 35px;
+}
+@media only screen and (min-width: 768px) {
+  .container .inner-header .intro-heading {
+    padding: 0px 80px;
+  }
 }
 .container .inner-header .intro-heading h4 {
   font-size: 20px;
@@ -265,12 +346,22 @@ header .navbar-panel .navbar li a:focus, header .navbar-panel .navbar li a:hover
     font-size: 24px;
   }
 }
+@media only screen and (min-width: 768px) {
+  .container .inner-header .intro-heading h4 {
+    font-size: 28px;
+  }
+}
 .container .inner-header .intro-heading h2 {
   font-size: 24px;
 }
 @media only screen and (min-width: 415px) {
   .container .inner-header .intro-heading h2 {
     font-size: 28px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .container .inner-header .intro-heading h2 {
+    font-size: 42px;
   }
 }
 .container .inner-header .intro-heading h2 span {
@@ -288,12 +379,23 @@ header .navbar-panel .navbar li a:focus, header .navbar-panel .navbar li a:hover
     padding-right: 7rem;
   }
 }
+@media only screen and (min-width: 768px) {
+  .container .inner-header .intro-content {
+    padding-left: 80px;
+    line-height: 32.4px;
+  }
+}
 .container .inner-header .intro-content .lead {
   font-size: 18px;
 }
 @media only screen and (min-width: 415px) {
   .container .inner-header .intro-content .lead {
     font-size: 20px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .container .inner-header .intro-content .lead {
+    font-size: 21px;
   }
 }
 .container .inner-header .intro-buttons {
@@ -308,7 +410,15 @@ header .navbar-panel .navbar li a:focus, header .navbar-panel .navbar li a:hover
 }
 @media only screen and (min-width: 415px) {
   .container .inner-header .intro-buttons {
-    margin-top: 2rem;
+    margin-top: 1rem;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .container .inner-header .intro-buttons {
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-top: 1rem;
+    padding-left: 80px;
   }
 }
 .container .inner-header .intro-buttons a {
@@ -326,18 +436,35 @@ header .navbar-panel .navbar li a:focus, header .navbar-panel .navbar li a:hover
     font-size: 18px;
   }
 }
+@media only screen and (min-width: 768px) {
+  .container .inner-header .intro-buttons a {
+    font-size: 21px;
+    width: 250px;
+  }
+}
 .container .inner-header .intro-buttons a.btn {
   background: #56cfe1;
   color: black;
+  margin-top: 15px;
+}
+@media only screen and (min-width: 415px) {
+  .container .inner-header .intro-buttons a.btn {
+    margin-top: 20px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .container .inner-header .intro-buttons a.btn {
+    margin-left: 35px;
+    margin-top: 0;
+  }
 }
 .container .inner-header .intro-buttons a.services-btn {
   background: #5e60ce;
   color: white;
-  margin-top: 15px;
 }
-@media only screen and (min-width: 415px) {
+@media only screen and (min-width: 768px) {
   .container .inner-header .intro-buttons a.services-btn {
-    margin-top: 20px;
+    margin-top: 0;
   }
 }
 
@@ -400,7 +527,7 @@ header .navbar-panel .navbar li a:focus, header .navbar-panel .navbar li a:hover
   }
 
   .content {
-    height: 30vh;
+    height: 10vh;
   }
 
   h1 {
