@@ -40,8 +40,12 @@ function changeLinkState() {
   }
 }
 
+function isPastHomePage() {
+  return window.scrollY + 800 > home.offsetTop + home.offsetHeight;
+}
+
 function changeNavState() {
-  if (window.scrollY + 800 > home.offsetTop + home.offsetHeight) {
+  if (isPastHomePage()) {
     navbar.classList.add("sticky");
   } else {
     navbar.classList.remove("sticky");
@@ -62,6 +66,7 @@ function showOverlay() {
   overlay.addEventListener("click", () => {
     menuToggle.classList.remove("active");
     navMenu.classList.remove("show");
+    changeNavState();
     overlay.classList.remove("overlay-active");
     body.style.overflowY = "auto";
   });
