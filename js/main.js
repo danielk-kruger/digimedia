@@ -41,7 +41,7 @@ function changeLinkState() {
 }
 
 function isPastHomePage() {
-  return window.scrollY + 800 > home.offsetTop + home.offsetHeight;
+  return window.scrollY + 700 > home.offsetTop + home.offsetHeight;
 }
 
 function changeNavState() {
@@ -67,6 +67,7 @@ function showOverlay() {
     menuToggle.classList.remove("active");
     navMenu.classList.remove("show");
     changeNavState();
+    // changeNavState();
     overlay.classList.remove("overlay-active");
     body.style.overflowY = "auto";
   });

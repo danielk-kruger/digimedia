@@ -45,8 +45,9 @@ header nav {
   justify-content: flex-start;
   align-items: center;
   position: relative;
-  transition: background 0.35s ease-in-out;
-  -webkit-transition: background 0.35s ease-in-out;
+  background: transparent;
+  transition: background 0.35s linear;
+  -webkit-transition: background 0.35s linear;
 }
 header nav.sticky {
   background: linear-gradient(60deg, #4ea8de 0%, #6930c3 100%);

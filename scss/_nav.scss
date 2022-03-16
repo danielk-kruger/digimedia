@@ -17,8 +17,9 @@ header {
     justify-content: flex-start;
     align-items: center;
     position: relative;
-    transition: background 0.35s ease-in-out;
-    -webkit-transition: background 0.35s ease-in-out;
+    background: transparent;
+    transition: background 0.35s linear;
+    -webkit-transition: background 0.35s linear;
 
     &.sticky {
       background: linear-gradient(60deg, $blue-lighter 0%, $purple-deep 100%);
