@@ -3,6 +3,8 @@ const navMenu = document.querySelector(".navbar-panel");
 const navbar = document.querySelector("nav");
 const home = document.getElementById("home");
 
+const overlay = document.querySelector(".overlay");
+
 // const homePage = document.getElementById('home');
 const sections = document.querySelectorAll(".link-section");
 const links = document.querySelectorAll(".navbar-item__link");
@@ -11,13 +13,14 @@ const body = document.querySelector("body");
 menuToggle.addEventListener("click", () => {
   menuToggle.classList.toggle("active");
   navMenu.classList.toggle("show");
+  showOverlay();
   // navMenu.classList.toggle("animate__bounce");
 
   if (navMenu.classList.contains("show")) {
-    body.style.overflowY = "hidden";
+    // body.style.overflowY = "hidden";
     navbar.classList.remove("sticky");
   } else {
-    body.style.overflowY = "auto";
+    // body.style.overflowY = "auto";
     changeNavState();
   }
 });
@@ -43,6 +46,27 @@ function changeNavState() {
   } else {
     navbar.classList.remove("sticky");
   }
+}
+
+function disableScrolling(elem) {
+  if (elem) {
+    body.style.overflowY = "hidden";
+  } else {
+    body.style.overflowY = "auto";
+  }
+}
+
+function showOverlay() {
+  overlay.classList.toggle("overlay-active");
+
+  overlay.addEventListener("click", () => {
+    menuToggle.classList.remove("active");
+    navMenu.classList.remove("show");
+    overlay.classList.remove("overlay-active");
+    body.style.overflowY = "auto";
+  });
+
+  disableScrolling(overlay.classList.contains("overlay-active"));
 }
 
 changeLinkState();
