@@ -63,7 +63,7 @@ header nav #mobileToggle .bar:nth-child(3) {
   width: 35px;
 }
 header nav #mobileToggle.active {
-  top: calc(5% + 25px);
+  top: calc(5% + 10px);
 }
 header nav #mobileToggle.active .bar {
   margin: 0;
@@ -100,7 +100,7 @@ header .navbar-panel {
   text-align: center;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
   padding: 5px 0px;
   transition: all 0.45s ease;
@@ -121,14 +121,14 @@ header .navbar-panel .socials .separator {
   background: #7400b9;
 }
 header .navbar-panel .socials-icons {
-  width: 70%;
+  width: 90%;
   display: flex;
   justify-content: space-around;
 }
 header .navbar-panel .socials-icons a {
   display: block;
   text-decoration: none;
-  font-size: 24px;
+  font-size: 28px;
 }
 header .navbar-panel .socials-icons a.git {
   color: black;
@@ -148,9 +148,6 @@ header .navbar-panel .socials-icons a.mail {
 header .navbar-panel.show {
   transform: translate(-50%, 0px);
   -webkit-transform: translate(-50%, 0px);
-}
-header .navbar-panel .logo {
-  padding-bottom: 3.5rem;
 }
 header .navbar-panel .logo h2 {
   font-size: 28px;
