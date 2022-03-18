@@ -3,6 +3,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  -webkit-box-sizing: border-box;
 }
 
 body {
@@ -273,6 +274,9 @@ header .navbar-panel .navbar li a:focus, header .navbar-panel .navbar li a:hover
   position: relative;
   text-align: center;
   background: linear-gradient(60deg, #4ea8de 0%, #6930c3 100%);
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   color: white;
   width: 100%;
 }
