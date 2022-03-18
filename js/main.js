@@ -16,11 +16,9 @@ menuToggle.addEventListener("click", () => {
   menuToggle.classList.toggle("active");
   navMenu.classList.toggle("show");
   showOverlay();
-  // navMenu.classList.toggle("animate__bounce");
 
   if (!navMenu.classList.contains("show")) {
     changeNavState();
-    // body.style.overflowY = "hidden";
   } else {
     navbar.classList.remove("sticky");
   }
@@ -37,12 +35,21 @@ function changeLinkState() {
     links[index].classList.add("active");
 }
 
-function isPastHomePage() {
-  return window.scrollY + 600 > home.offsetTop + home.offsetHeight;
+function getDeviceType() {
+  return window.innerWidth;
+}
+
+function setNavOffset(val) {
+  return window.scrollY + val > home.offsetTop + home.offsetHeight;
+}
+
+function isPastHomePage(device) {
+  if (device < 768) return setNavOffset(600);
+  else return setNavOffset(400);
 }
 
 function changeNavState() {
-  if (isPastHomePage()) navbar.classList.add("sticky");
+  if (isPastHomePage(getDeviceType())) navbar.classList.add("sticky");
   else navbar.classList.remove("sticky");
 }
 
@@ -75,6 +82,7 @@ window.addEventListener("scroll", () => {
 AOS.init({
   offset: 0,
   duration: 450,
-  easing: "ease-in-sine",
+  easing: "ease-in-out-cubic",
   delay: 50,
+  anchor: "top-center",
 });

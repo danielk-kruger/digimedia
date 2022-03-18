@@ -304,6 +304,13 @@ header .navbar-panel .navbar li a:focus, header .navbar-panel .navbar li a:hover
   margin-bottom: -2rem;
   margin-left: 3.5rem;
 }
+@media only screen and (min-height: 850px) {
+  .container .inner-header img {
+    width: 450px;
+    height: 550px;
+    margin-top: 4rem;
+  }
+}
 @media only screen and (min-width: 415px) {
   .container .inner-header img {
     margin-top: 9rem;
@@ -343,6 +350,11 @@ header .navbar-panel .navbar li a:focus, header .navbar-panel .navbar li a:hover
   margin-bottom: 5px;
   line-height: 32.4px;
 }
+@media only screen and (min-height: 850px) {
+  .container .inner-header .intro-heading h4 {
+    font-size: 21px;
+  }
+}
 @media only screen and (min-width: 415px) {
   .container .inner-header .intro-heading h4 {
     font-size: 24px;
@@ -355,6 +367,11 @@ header .navbar-panel .navbar li a:focus, header .navbar-panel .navbar li a:hover
 }
 .container .inner-header .intro-heading h2 {
   font-size: 24px;
+}
+@media only screen and (min-height: 850px) {
+  .container .inner-header .intro-heading h2 {
+    font-size: 28px;
+  }
 }
 @media only screen and (min-width: 415px) {
   .container .inner-header .intro-heading h2 {
@@ -376,6 +393,11 @@ header .navbar-panel .navbar li a:focus, header .navbar-panel .navbar li a:hover
   padding-left: 35px;
   padding-right: 50px;
 }
+@media only screen and (min-height: 850px) {
+  .container .inner-header .intro-content {
+    padding-right: 9rem;
+  }
+}
 @media only screen and (min-width: 415px) {
   .container .inner-header .intro-content {
     padding-right: 7rem;
@@ -389,6 +411,11 @@ header .navbar-panel .navbar li a:focus, header .navbar-panel .navbar li a:hover
 }
 .container .inner-header .intro-content .lead {
   font-size: 18px;
+}
+@media only screen and (min-height: 850px) {
+  .container .inner-header .intro-content .lead {
+    font-size: 21px;
+  }
 }
 @media only screen and (min-width: 415px) {
   .container .inner-header .intro-content .lead {
@@ -409,6 +436,11 @@ header .navbar-panel .navbar li a:focus, header .navbar-panel .navbar li a:hover
   text-align: center;
   padding: 0px 15px;
   margin-top: 0rem;
+}
+@media only screen and (min-height: 850px) {
+  .container .inner-header .intro-buttons {
+    margin-top: 1rem;
+  }
 }
 @media only screen and (min-width: 415px) {
   .container .inner-header .intro-buttons {
