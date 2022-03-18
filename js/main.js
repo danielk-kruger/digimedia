@@ -1,3 +1,5 @@
+"use strict";
+
 const menuToggle = document.querySelector("#mobileToggle");
 const navMenu = document.querySelector(".navbar-panel");
 const navbar = document.querySelector("nav");
@@ -16,12 +18,11 @@ menuToggle.addEventListener("click", () => {
   showOverlay();
   // navMenu.classList.toggle("animate__bounce");
 
-  if (navMenu.classList.contains("show")) {
-    // body.style.overflowY = "hidden";
-    navbar.classList.remove("sticky");
-  } else {
-    // body.style.overflowY = "auto";
+  if (!navMenu.classList.contains("show")) {
     changeNavState();
+    // body.style.overflowY = "hidden";
+  } else {
+    navbar.classList.remove("sticky");
   }
 });
 
@@ -32,12 +33,8 @@ function changeLinkState() {
   links.forEach((link) => link.classList.remove("active"));
 
   // add the active class if within visible height
-  if (
-    window.scrollY - sections[index].offsetHeight <
-    sections[index].offsetTop
-  ) {
+  if (window.scrollY - sections[index].offsetHeight < sections[index].offsetTop)
     links[index].classList.add("active");
-  }
 }
 
 function isPastHomePage() {
@@ -45,19 +42,13 @@ function isPastHomePage() {
 }
 
 function changeNavState() {
-  if (isPastHomePage()) {
-    navbar.classList.add("sticky");
-  } else {
-    navbar.classList.remove("sticky");
-  }
+  if (isPastHomePage()) navbar.classList.add("sticky");
+  navbar.classList.remove("sticky");
 }
 
 function disableScrolling(elem) {
-  if (elem) {
-    body.style.overflowY = "hidden";
-  } else {
-    body.style.overflowY = "auto";
-  }
+  if (!elem) body.style.overflowY = "auto";
+  body.style.overflowY = "hidden";
 }
 
 function showOverlay() {
@@ -79,4 +70,12 @@ changeLinkState();
 window.addEventListener("scroll", () => {
   changeLinkState();
   changeNavState();
+});
+
+AOS.init({
+  offset: 200,
+  duration: 450,
+  easing: "ease-in-sine",
+  delay: 50,
+  startEvent: "load",
 });
