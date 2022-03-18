@@ -77,5 +77,4 @@ AOS.init({
   duration: 450,
   easing: "ease-in-sine",
   delay: 50,
-  startEvent: "load",
 });
