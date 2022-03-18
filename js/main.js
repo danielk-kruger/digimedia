@@ -73,7 +73,7 @@ window.addEventListener("scroll", () => {
 });
 
 AOS.init({
-  offset: 200,
+  offset: 100,
   duration: 450,
   easing: "ease-in-sine",
   delay: 50,
