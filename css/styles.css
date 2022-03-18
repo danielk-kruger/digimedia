@@ -34,7 +34,7 @@ body {
 header {
   position: fixed;
   top: 0;
-  height: 80px;
+  height: 60px;
   width: 100%;
   z-index: 1000;
   overflow-x: hidden;
@@ -55,7 +55,7 @@ header nav.sticky {
 }
 header nav #mobileToggle {
   position: fixed;
-  top: 30px;
+  top: 20px;
   right: 40px;
   z-index: 101;
   display: flex;
