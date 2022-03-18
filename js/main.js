@@ -43,12 +43,12 @@ function isPastHomePage() {
 
 function changeNavState() {
   if (isPastHomePage()) navbar.classList.add("sticky");
-  navbar.classList.remove("sticky");
+  else navbar.classList.remove("sticky");
 }
 
 function disableScrolling(elem) {
   if (!elem) body.style.overflowY = "auto";
-  body.style.overflowY = "hidden";
+  else body.style.overflowY = "hidden";
 }
 
 function showOverlay() {
